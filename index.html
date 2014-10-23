@@ -1,4 +1,3 @@
-
 <html>
     <head> 
         <title>unicode</title> 
@@ -6,14 +5,23 @@
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="lib/jquery-2-min.js"></script>
-        <script src="src/utf.js"></script> </head> 
+        <script src="lib/utf.js"></script> </head> 
+        <script src="lib/chase.js"></script> </head> 
+
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+      <!--<script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
+      <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <!--<script src="unicode.js"></script> </head>-->
     <body> 
         <h1>What is unicode?</h1> 
         <div id="contents">
-            <input type="text"></input>
+            <input type="text" id="amount" value=5></input>
             <div id="slider-div"></div>
             <button name="toggle">toggle</button>
+
+ 
+            <div id="slider"></div>
             <table>
                 <tr>
                     <td>codepoint</td>
@@ -51,22 +59,6 @@
                     <td>00000000</td>
                 </tr>
             </table>
-
-
         </div>
     </body> 
-    <script> 
-        var numeral = { hex: "\\x00ff", bin: "00000000" }
-        var json = { ascii : numeral
-                   , utf8  : numeral
-                   , utf16 : numeral
-                   , utf32 : numeral
-                   , glyph : "a" }
-
-        var toggleInputField = function() { console.log("toggled") };
-
-
-        var json = makeJson();
-        console.log($('contents').innerHtml = );
-    </script> 
 </html>
