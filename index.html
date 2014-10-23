@@ -1,0 +1,28 @@
+
+<html>
+    <head> 
+        <title>Embedding Elm in HTML!</title> 
+        <script src="elm-runtime.js"></script> 
+        <script src="build/unicode.js"></script> </head> 
+        <script src="utf.js"></script> </head> 
+    <body> 
+        <h1>What is unicode?</h1> 
+        <div id="elm-window" style="width:50%; height:400px;"></div> 
+    </body> 
+    <script> 
+        var numeral = { hex: "\\x00ff", bin: "00000000" }
+        var json = { ascii : numeral
+                   , utf8  : numeral
+                   , utf16 : numeral
+                   , utf32 : numeral
+                   , glyph : "a" }
+        var init = { messageIn: json }
+        var elmDiv = document.getElementById('elm-window'); 
+        var gate = Elm.embed(Elm.Unicode, elmDiv, init); 
+        gate.ports.messageOut.subscribe(function(msg) {
+            var record = makeJson(parseInt(msg));
+            gate.ports.messageIn.send(record); 
+        });
+
+    </script> 
+</html>
