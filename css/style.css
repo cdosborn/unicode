@@ -14,7 +14,10 @@ th, td {
     padding: 0;
     width:92px;
 }
-
+table span {
+    float: right;
+}
+* { font-size: 1.2em; }
 #glyph {
     font-size: 20px;
     margin-left: 20px;
