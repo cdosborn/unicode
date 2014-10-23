@@ -1,0 +1,17 @@
+table {
+    /* cellspacing */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    /* This covers the th elements */
+}
+tr {
+    /* This covers the tr elements */
+}
+th, td {
+    /* cellpadding */
+    padding: 0;
+    width:92px;
+}
+

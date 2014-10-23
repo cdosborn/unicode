@@ -1,13 +1,59 @@
 
 <html>
     <head> 
-        <title>Embedding Elm in HTML!</title> 
-        <script src="elm-runtime.js"></script> 
-        <script src="build/unicode.js"></script> </head> 
-        <script src="utf.js"></script> </head> 
+        <title>unicode</title> 
+        <meta charset="UTF-8"> 
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="lib/jquery-2-min.js"></script>
+        <script src="src/utf.js"></script> </head> 
+    <!--<script src="unicode.js"></script> </head>-->
     <body> 
         <h1>What is unicode?</h1> 
-        <div id="elm-window" style="width:50%; height:400px;"></div> 
+        <div id="contents">
+            <input type="text"></input>
+            <div id="slider-div"></div>
+            <button name="toggle">toggle</button>
+            <table>
+                <tr>
+                    <td>codepoint</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>00000001</td>
+                </tr>
+                <tr>
+                    <td>ascii</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>00000001</td>
+                </tr>
+                <tr>
+                    <td>utf8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>00000001</td>
+                </tr>
+                <tr>
+                    <td>utf16</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>utf32</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                </tr>
+            </table>
+
+
+        </div>
     </body> 
     <script> 
         var numeral = { hex: "\\x00ff", bin: "00000000" }
@@ -16,13 +62,11 @@
                    , utf16 : numeral
                    , utf32 : numeral
                    , glyph : "a" }
-        var init = { messageIn: json }
-        var elmDiv = document.getElementById('elm-window'); 
-        var gate = Elm.embed(Elm.Unicode, elmDiv, init); 
-        gate.ports.messageOut.subscribe(function(msg) {
-            var record = makeJson(parseInt(msg));
-            gate.ports.messageIn.send(record); 
-        });
 
+        var toggleInputField = function() { console.log("toggled") };
+
+
+        var json = makeJson();
+        console.log($('contents').innerHtml = );
     </script> 
 </html>
