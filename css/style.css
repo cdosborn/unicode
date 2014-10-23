@@ -16,6 +16,7 @@ th, td {
 }
 table span {
     float: right;
+    white-space: nowrap;
 }
 * { font-size: 1.2em; }
 #glyph {
