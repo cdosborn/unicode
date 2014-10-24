@@ -12,11 +12,17 @@ tr {
 th, td {
     /* cellpadding */
     padding: 0;
-    width:92px;
 }
-table span {
+table span.container {
     float: right;
-    white-space: nowrap;
+}
+
+span {
+    font-size: 1em;
+}
+
+.highlight {
+    background-color: yellow;
 }
 * { font-size: 1.2em; }
 #glyph {
