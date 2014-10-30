@@ -1,3 +1,11 @@
+* { 
+    font-size: 1.3em; 
+}
+
+#contents {
+    padding: 1em;
+}
+ 
 table {
     /* cellspacing */
     border-collapse: collapse;
@@ -13,6 +21,12 @@ th, td {
     /* cellpadding */
     padding: 0;
 }
+
+table {
+    width:100%;
+    margin-top:15px;
+}
+
 table span.container {
     float: right;
 }
@@ -24,9 +38,19 @@ span {
 .highlight {
     background-color: yellow;
 }
-* { font-size: 1.2em; }
+
+#header {
+   padding-bottom:15px;
+}
+
+#slider-div {
+    margin-bottom:15px;
+}
+
+
 #glyph {
+    position: absolute;
     font-size: 40px;
     margin-left: 50px;
-    display: inline;
+    display: inline-block;
 }

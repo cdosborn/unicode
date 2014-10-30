@@ -5,9 +5,9 @@
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="lib/jquery-2-min.js"></script>
-        <script src="lib/utf.js"></script> </head> 
-        <script src="lib/chase.js"></script> </head> 
-        <script src="lib/connor.js"></script> </head> 
+        <script src="lib/bits.js"></script> </head> 
+        <script src="lib/encode.js"></script> </head> 
+        <script src="lib/ui.js"></script> </head> 
 
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
       <!--<script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
@@ -16,15 +16,16 @@
     <!--<script src="unicode.js"></script> </head>-->
     <body> 
         <div id="contents">
-            <select id='input-base-dropdown'>
-                <option value='dec'>Decimal</option>
-                <option value='hex'>Hex</option>
-                <option value='bin'>Binary</option>
-            </select>
-            <input type="text" id="amount"/>
-            
-            <div id="glyph"></div>
-
+            <div id="header"> 
+                <select id='input-base-dropdown'>
+                    <option value='dec'>Decimal</option>
+                    <option value='hex'>Hex</option>
+                    <option value='bin'>Binary</option>
+                </select>
+                <input type="text" id="amount"/>
+                
+                <div id="glyph"></div>
+            </div>
             <div id="slider-div"></div>
             <!--<button name="toggle">toggle</button>-->
 
