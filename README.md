@@ -5,7 +5,7 @@ Visualize common encodings
 
 [2]: http://cdosborn.github.io/unicode/?cp=11039
 
-![[Screenshot of tool][2]][1]
+[![Screenshot of tool][1]][2]
 
 This was a project [@theicfire](https://github.com/theicfire) and I hacked together at the [Recurse Center](https://www.recurse.com/). 
 
